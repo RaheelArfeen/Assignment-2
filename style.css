@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main{
+    background: linear-gradient(to top, #FEA301 -250%, #fff);
+}
+
+/* ===== Shared styles ===== */
+
+.orange{
+    color: #FEA301;
+}
+
+.blue{
+    color: #01ACFD;
+}
+
+.cyan{
+    color: #05D4DF;
+}
+
+
+.purple{
+    color: #5D58EF;
+}
+
+.btn{
+    padding: 10px 60px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.d-flex{
+    display: flex;
+}
+
+section{
+    max-width: 1250px;
+    margin: 0 auto;
+    color: #202020;
+}
+
+/* ===== Header styles =====  */
+header{
+    padding: 20px;
+    max-width: 1250px;
+    margin: 0 auto;
+    color: #202020;
+}
+
+
+/* ===== Nav styles ===== */
+nav{
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .home{
+    font-weight: bold;
+}
+
+nav .logo{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav .logo img{
+    margin-right: 10px;
+}
+
+nav ul{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav li a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#menu-btn{
+    display: none;
+    font-size: 30px;
+}
+/* ===== Banner styles ===== */
+.banner{
+    max-width: 1250px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 120px;
+    margin-top: 25px;
+}
+
+.banner-content .btn{
+    padding: 13px 45px;
+}
+
+.banner-title{
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+    padding-right: 20px;
+    line-height: 1.2;
+}
+
+.banner-description{
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+}
+
+/* ===== Standard curriculum styles ===== */
+.curriculum{
+    text-align: center;
+    background-image: url('assets/bg.png');
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.cards{
+    display: flex;
+    gap: 28px;
+    margin-bottom: 80px;
+}
+
+.card{
+    border-radius: 18px;
+    height: 475px;
+    width: 365px;
+    padding: 50px;
+    position: relative;
+}
+
+.card img{
+    width: 90px;
+    margin-bottom: 32px;
+}
+
+.card-title{
+    margin-bottom: 32px;
+}
+
+.card .read-more{
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%);
+}
+
+.slide{
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.slide div{
+    background: #FEA301;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== Our Stories styles ===== */
+.stories{
+    padding: 60px;
+}
+
+
+@media screen and (max-width: 460px) {
+    .section-title{
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    header{
+        padding: 0;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #FEA301;
+        padding: 0 15px;
+        padding-bottom: 15px;
+    }
+
+    .logo span{
+        display: none;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav .btn{
+        display: none;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .banner-title{
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+
+    .banner-description{
+        font-size: .8rem;
+    }
+
+    .banner-img{
+        margin-bottom: -80px;
+        padding: .5rem;
+    }
+
+    .curriculum{
+        margin-top: 0px;
+        padding: 40px;
+    }
+
+    .card img{
+        margin-bottom: 10px;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .card{
+        height: 320px;
+        width: 360px;
+    }
+
+    .card-title{
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .card-description{
+        font-size: .7rem;
+    }
+
+    .slide{
+        display: none;
+    }
+}
