@@ -9,7 +9,6 @@
 }
 
 main{
-    background: linear-gradient(to top, #FEA301 -400%, #fff);
     width: 100%;
 }
 
@@ -127,6 +126,10 @@ nav li a{
     line-height: 1.2;
 }
 
+.banner-title .change{
+    color: #FEA301;
+}
+
 .banner-description{
     margin-bottom: 24px;
     font-size: 1.25rem;
@@ -207,16 +210,30 @@ nav li a{
 /* ===== Our Stories styles ===== */
 .stories{
     padding: 60px;
-    background-image: url('assets/bg.png');
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    background-image: url('./assets/bg.png');
+    position: relative;
+}
+
+.stories .bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to top, #FEA301 -400%, transparent);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .boxes{
     display: flex;
     gap: 18px;
     min-height: 610px;
+    z-index: 2;
 }
 
 .box-right{
@@ -229,11 +246,16 @@ nav li a{
     width: 100%;
 }
 
+.boxes{
+    z-index: 100
+}
+
 .box1{
     border-radius: 16px;
     overflow: hidden;
-    background-color: white;
+    background: white;
     max-width: 540px;
+    z-index: 5;
 }
 
 .box{
@@ -297,6 +319,8 @@ nav li a{
     background: #111111;
     margin: 0 auto;
     margin-top: 80px;
+    z-index: 100;
+    cursor: pointer;
 }
 
 /* ===== footer styles ===== */
@@ -485,6 +509,10 @@ footer .logo-side{
         display: none;
     }
 
+    .logo svg{
+        height: 55px;
+    }
+
     #menu-btn{
         display: block;
     }
@@ -506,6 +534,10 @@ footer .logo-side{
     .banner-title{
         font-size: 2rem;
         padding-left: 20px;
+    }
+
+    .banner-title .change{
+        color: #01ACFD;
     }
 
     .banner-description{
@@ -625,7 +657,7 @@ footer .logo-side{
 
     footer .content{
         flex-direction: column;
-        gap: 50px;
+        gap: 0px;
     }
 
     footer .about{
