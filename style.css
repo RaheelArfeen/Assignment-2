@@ -10,6 +10,7 @@
 
 main{
     background: linear-gradient(to top, #FEA301 -300%, #fff);
+    width: 100%;
 }
 
 .section-title{
@@ -164,20 +165,27 @@ nav li a{
 }
 
 .card img{
-    width: 90px;
+    width: 120px;
     margin-bottom: 32px;
 }
 
 .card-title{
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+}
+
+.card-description{
+    font-size: 1rem;
+    color: #808080;
+    line-height: 1.5;
+    margin-bottom: 16px;
 }
 
 .card .read-more{
     font-weight: bold;
     position: absolute;
+    bottom: 30px;
     left: 50%;
-    bottom: 50px;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
 
 .slide{
@@ -199,20 +207,57 @@ nav li a{
 .stories{
     padding: 60px;
     background-image: url('assets/bg.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxes{
+    display: flex;
+    gap: 18px;
+    height: 610px;
+}
+
+.box-right{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.boxes img{
+    width: 100%;
 }
 
 .box1{
-    padding: 33px;
     border-radius: 16px;
     overflow: hidden;
     background-color: white;
     max-width: 540px;
 }
 
-.box1 img{
-    position: relative;
-    left: -33px;
-    top: -33px;
+.box{
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    max-width: 290px;
+}
+
+.box .box-title{
+    font-size: 1rem;
+}
+
+.box .date{
+    margin-bottom: 20px;
+}
+
+.box .content{
+    padding: 0 35px;
+    margin-top: -2rem;
+}
+
+.box1 .content{
+    padding: 0 35px;
+    margin-top: -2rem;
 }
 
 .date{
@@ -222,7 +267,28 @@ nav li a{
     font-family: 'Raleway', sans-serif;
     border: none;
     font-size: 1rem;
-    
+    margin-bottom: 35px;
+}
+
+.box-title{
+    margin-bottom: 35px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.box-description{
+    margin-bottom: 35px;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.stories .btn{
+    background: #111111;
+    margin: 0 auto;
+    margin-top: 80px;
 }
 
 @media screen and (max-width: 460px) {
@@ -290,6 +356,7 @@ nav li a{
 
     .card img{
         margin-bottom: 10px;
+        width: 100px;
     }
 
     .cards{
@@ -307,10 +374,52 @@ nav li a{
     }
 
     .card-description{
-        font-size: .7rem;
+        font-size: .8rem;
+    }
+
+    .read-more{
+        font-size: .8rem;
+        bottom: 0;
     }
 
     .slide{
         display: none;
+    }
+
+    .boxes{
+        flex-direction: column;
+        position: relative;
+        right: 2.4rem;
+    }
+
+    .box{
+        width: 200px;
+        height: 230px;
+    }
+
+    .date{
+        padding: 10px;
+        font-size: .6rem;
+        margin-bottom: 0;
+    }
+
+    .box .box-title{
+        font-size: .8rem;
+    }
+
+    .box .content{
+        padding: 12px;
+    }
+
+    .box1{
+        display: none;
+    }
+
+    .stories .btn{
+        margin-top: 0px;
+    }
+
+    .stories{
+        margin-top: -40px;
     }
 }
