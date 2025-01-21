@@ -198,7 +198,7 @@ nav li a{
 /* ===== Our Stories styles ===== */
 .stories{
     padding: 60px;
-    background: red;
+    background-image: url('assets/bg.png');
 }
 
 .box1{
