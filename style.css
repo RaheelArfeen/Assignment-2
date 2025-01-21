@@ -388,27 +388,33 @@ nav li a{
 
     .boxes{
         flex-direction: column;
-        position: relative;
-        right: 2.4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .box{
-        width: 200px;
-        height: 230px;
+        width: 180px;
+        height: 200px;
+    }
+
+    .box-right{
+        gap: 10px;
     }
 
     .date{
         padding: 10px;
         font-size: .6rem;
-        margin-bottom: 0;
+        position: relative;
+        top: 10px;
     }
 
     .box .box-title{
-        font-size: .8rem;
+        font-size: .7rem;
     }
 
     .box .content{
-        padding: 12px;
+        padding: 0 12px;
     }
 
     .box1{
@@ -416,7 +422,7 @@ nav li a{
     }
 
     .stories .btn{
-        margin-top: 0px;
+        margin-top: -100px;
     }
 
     .stories{
