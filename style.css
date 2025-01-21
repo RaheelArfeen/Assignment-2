@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -8,7 +9,12 @@
 }
 
 main{
-    background: linear-gradient(to top, #FEA301 -250%, #fff);
+    background: linear-gradient(to top, #FEA301 -300%, #fff);
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 80px;
 }
 
 /* ===== Shared styles ===== */
@@ -192,8 +198,32 @@ nav li a{
 /* ===== Our Stories styles ===== */
 .stories{
     padding: 60px;
+    background: red;
 }
 
+.box1{
+    padding: 33px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    max-width: 540px;
+}
+
+.box1 img{
+    position: relative;
+    left: -33px;
+    top: -33px;
+}
+
+.date{
+    padding: 15px 18px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    font-size: 1rem;
+    
+}
 
 @media screen and (max-width: 460px) {
     .section-title{
@@ -242,6 +272,10 @@ nav li a{
 
     .banner-description{
         font-size: .8rem;
+    }
+    .banner .btn{
+        padding: 10px 20px;
+        border-radius: 10px;
     }
 
     .banner-img{
