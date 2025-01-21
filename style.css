@@ -260,6 +260,12 @@ nav li a{
     margin-top: -2rem;
 }
 
+.box .date{
+    transform: scale(0.9);
+    position: relative;
+    right: 13px;
+}
+
 .date{
     padding: 15px 18px;
     border-radius: 50px;
@@ -289,6 +295,30 @@ nav li a{
     background: #111111;
     margin: 0 auto;
     margin-top: 80px;
+}
+
+/* ===== footer styles ===== */
+footer{
+    width: 100%;
+    background: #01ACFD;
+    padding: 120px 140px;
+    color: white;
+}
+
+footer .logo p{
+    font-size: 2.5rem;
+}
+
+footer .logo{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+}
+
+footer .logo svg{
+    height: 80px;
+    width: 80px;
 }
 
 @media screen and (max-width: 460px) {
