@@ -9,7 +9,7 @@
 }
 
 main{
-    background: linear-gradient(to top, #FEA301 -300%, #fff);
+    background: linear-gradient(to top, #FEA301 -400%, #fff);
     width: 100%;
 }
 
@@ -151,15 +151,16 @@ nav li a{
 }
 
 .cards{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
     margin-bottom: 80px;
 }
 
 .card{
     border-radius: 18px;
-    height: 475px;
-    width: 365px;
+    min-height: 475px;
+    max-width: 365px;
     padding: 50px;
     position: relative;
 }
@@ -215,7 +216,7 @@ nav li a{
 .boxes{
     display: flex;
     gap: 18px;
-    height: 610px;
+    min-height: 610px;
 }
 
 .box-right{
@@ -258,6 +259,7 @@ nav li a{
 .box1 .content{
     padding: 0 35px;
     margin-top: -2rem;
+    min-height: 320px;
 }
 
 .box .date{
@@ -305,7 +307,15 @@ footer{
     color: white;
 }
 
-footer .logo p{
+footer .content{
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+footer .logo{
     font-size: 2.5rem;
 }
 
@@ -317,11 +327,144 @@ footer .logo{
 }
 
 footer .logo svg{
-    height: 80px;
+    min-height: 80px;
     width: 80px;
 }
 
-@media screen and (max-width: 460px) {
+footer .logo-side{
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    gap: 35px;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.about p{
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+    .boxes{
+        height: 200px;
+    }
+
+    .cards{
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main{
+        width: 100%;
+    }
+
+    .banner{
+        transform: scale(0.9);
+        align-items: center;
+    }
+
+    .banner-title{
+        font-size: 2.2rem;
+    }
+
+    .banner-description{
+        font-size: 1rem;
+    }
+
+    .box1{
+        display: none;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    footer{
+        padding: 100px ;
+    }
+
+    footer .content{
+        gap: 100px;
+    }
+
+    .box-right{
+        margin: 0 auto;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        padding: 0;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #FEA301;
+        padding: 15px;
+    }
+
+    .logo span{
+        display: none;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav .btn{
+        display: none;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .box1{
+        display: none;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    footer{
+        padding: 100px ;
+    }
+
+    footer .content{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
     .section-title{
         font-size: 1.8rem;
         margin-bottom: 30px;
@@ -335,8 +478,7 @@ footer .logo svg{
         display: flex;
         align-items: center;
         border-bottom: 2px solid #FEA301;
-        padding: 0 15px;
-        padding-bottom: 15px;
+        padding: 15px;
     }
 
     .logo span{
@@ -376,6 +518,7 @@ footer .logo svg{
 
     .banner-img{
         margin-bottom: -80px;
+        margin-top: -40px;
         padding: .5rem;
     }
 
@@ -390,12 +533,13 @@ footer .logo svg{
     }
 
     .cards{
+        display: flex;
         flex-direction: column;
     }
 
     .card{
-        height: 320px;
-        width: 360px;
+        min-height: 320px;
+        max-width: 360px;
     }
 
     .card-title{
@@ -424,8 +568,8 @@ footer .logo svg{
     }
 
     .box{
-        width: 180px;
-        height: 200px;
+        max-width: 200px;
+        min-height: 200px;
     }
 
     .box-right{
@@ -437,6 +581,7 @@ footer .logo svg{
         font-size: .6rem;
         position: relative;
         top: 10px;
+        left: -5px;
     }
 
     .box .box-title{
@@ -444,18 +589,49 @@ footer .logo svg{
     }
 
     .box .content{
-        padding: 0 12px;
+        padding: 0 12px 0 12px;
     }
 
     .box1{
         display: none;
     }
 
+    .stories{
+        padding: 20px;
+    }
+
     .stories .btn{
         margin-top: -100px;
+        
     }
 
     .stories{
         margin-top: -40px;
+    }
+
+    footer{
+        padding: 65px 20px;
+    }
+
+    footer .logo svg{
+        min-height: 70px;
+        width: 70px
+    }
+
+    footer .logo{
+        font-size: 2rem;
+    }
+
+    footer .content{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    footer .about{
+        margin-top: 32px;
+    }
+
+    footer .apps{
+        margin-top: 32px;
     }
 }
