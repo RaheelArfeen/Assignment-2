@@ -17,6 +17,10 @@ main{
     margin-bottom: 80px;
 }
 
+body{
+    background: #f7f7f7;
+}
+
 body::-webkit-scrollbar{
     display: none;
 }
@@ -192,16 +196,13 @@ nav li a{
 .card-description{
     font-size: 1rem;
     color: #808080;
-    line-height: 1.5;
+    line-height: 2;
     margin-bottom: 16px;
 }
 
 .card .read-more{
     font-weight: bold;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 35px;
 }
 
 .slide{
@@ -235,7 +236,7 @@ nav li a{
     height: 100%;
     width: 100%;
     position: absolute;
-    background: linear-gradient(to top, #FEA301 -400%, transparent);
+    background: linear-gradient(to top, #FEA301 -200%, transparent);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -415,7 +416,7 @@ footer .logo-side{
     }
 
     .banner-title{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .banner-description{
@@ -482,6 +483,10 @@ footer .logo-side{
         text-align: center;
     }
 
+    .banner-title{
+        font-size: 3rem;
+    }
+
     .box1{
         display: none;
     }
@@ -504,7 +509,6 @@ footer .logo-side{
 @media screen and (max-width: 576px) {
     section{
         max-width: 530px;
-        /* background: red; */
     }
 
     .section-title{
