@@ -17,7 +17,11 @@ main{
     margin-bottom: 80px;
 }
 
-/* ===== Shared styles ===== */
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* ======== Shared styles ======== */
 
 .orange{
     color: #FEA301;
@@ -55,7 +59,7 @@ section{
     color: #202020;
 }
 
-/* ===== Header styles =====  */
+/* ======== Header styles ========  */
 header{
     padding: 20px;
     max-width: 1250px;
@@ -64,7 +68,7 @@ header{
 }
 
 
-/* ===== Nav styles ===== */
+/* ======== Nav styles ======== */
 nav{
     align-items: center;
     justify-content: space-between;
@@ -106,7 +110,7 @@ nav li a{
     display: none;
     font-size: 30px;
 }
-/* ===== Banner styles ===== */
+/* ======== Banner styles ======== */
 .banner{
     max-width: 1250px;
     align-items: center;
@@ -135,16 +139,24 @@ nav li a{
     font-size: 1.25rem;
 }
 
-/* ===== Standard curriculum styles ===== */
+/* ======== Standard curriculum styles ======== */
 .curriculum{
     text-align: center;
-    background-image: url('assets/bg.png');
-    background-repeat: no-repeat;
     margin-top: 60px;
     padding: 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.curriculum .bg{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('assets/bg.png');
+    position: absolute;
+    background-repeat: repeat-x;
+    overflow: hidden
 }
 
 .section-title{
@@ -207,7 +219,8 @@ nav li a{
     cursor: pointer;
 }
 
-/* ===== Our Stories styles ===== */
+/* ======== Our Stories styles ======== */
+
 .stories{
     padding: 60px;
     display: flex;
@@ -489,6 +502,11 @@ footer .logo-side{
 }
 
 @media screen and (max-width: 576px) {
+    section{
+        max-width: 530px;
+        /* background: red; */
+    }
+
     .section-title{
         font-size: 1.8rem;
         margin-bottom: 30px;
@@ -501,7 +519,7 @@ footer .logo-side{
     nav{
         display: flex;
         align-items: center;
-        border-bottom: 2px solid #FEA301;
+        border-bottom: 1px solid #FEA301;
         padding: 15px;
     }
 
@@ -551,12 +569,12 @@ footer .logo-side{
     .banner-img{
         margin-bottom: -80px;
         margin-top: -40px;
-        padding: .5rem;
+        padding: -1rem;
     }
 
     .curriculum{
         margin-top: 0px;
-        padding: 40px;
+        padding: 20px;
     }
 
     .card img{
@@ -572,7 +590,7 @@ footer .logo-side{
 
     .card{
         min-height: 320px;
-        max-width: 360px;
+        width: 100%;
     }
 
     .card-title{
